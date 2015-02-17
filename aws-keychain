@@ -166,7 +166,7 @@ aws_keychain_status() {
 }
 
 aws_keychain_current_access_key_id() {
-  cat $AWS_CREDENTIALS_FILE | awk 'BEGIN { FS="=" } /^AWSAccessKeyId/ { print $2 }'
+  cat $AWS_CREDENTIALS_FILE | awk 'BEGIN { FS="=" } /^aws_access_key_id/ { print $2 }'
 }
 
 aws_keychain_find_name_by_id() {
